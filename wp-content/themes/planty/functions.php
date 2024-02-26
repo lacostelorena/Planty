@@ -5,3 +5,12 @@ function theme_enqueue_styles()
 {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
 }
+
+add_filter('wp_nav_menu_items','Ajout_adminlink', 10, 2);
+function Ajout_adminlink($items, $args)
+{
+    if(is_user_logged_in() && $args->theme_location == 'nav-menu'){
+        $items .='<li><a href="'.get_admin_url().'">Admin</a></li>';
+    }
+    return $items;
+}
