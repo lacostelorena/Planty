@@ -17,7 +17,6 @@ Version: 1.0
     background-color: white;
   }
   .line-vertical {
-    height: 100%;
     width: 1px;
     background-color: white;
   }
@@ -32,18 +31,60 @@ Version: 1.0
     width: 100%;
   }
 
+  @media (max-width: 768px){
+    .fruits{
+      flex-direction: column;
+    }
+  }
+
   /*champs d'informations*/
 .info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+@media (max-width: 768px){
+  .info{
+    flex-direction: column;
+  }
+}
 .envoi {
   display: flex;
   justify-content: center;
 }
 
-  /* page d'accueil */
+.form-head {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.card__fruit .wpcf7-form-control-wrap {
+  display: flex !important;
+  justify-content: center;
+}
+
+input[type=number] {
+  margin: 0 !important;
+  border-radius: 2px !important;
+  text-align: center !important;
+  height: fit-content !important;
+  padding: 5px 0px !important;
+  width: 30px !important;
+}
+
+.form h1,
+.form h2, 
+.form h3, 
+.form h4, 
+.form h5, 
+.form h6 {
+  color: #FFF;
+  margin: 0;
+}
+
+/*** page d'accueil ***/
   .elementor-25 .elementor-element.elementor-element-297ef4b {
     border-radius: 0px 0px 200px 200px / 0px 0px 40px 40px;
   }
@@ -51,7 +92,7 @@ Version: 1.0
    display: flex;
   }
 
-  /* header */
+/*** header ***/
 
   a:where(:not(.wp-element-button)) {
     font-size: 16px;
